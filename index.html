@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/apple-touch-icon.png">
+    <link rel="shortcut icon" href="images/android-chrome-192x192.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <title>Portfolio</title>
 </head>
@@ -65,7 +68,7 @@
                     <h3>Portfolio Website</h3>
                     <p>A clean portfolio built using HTML and CSS.</p>
                 </div>
-                
+
             </div>
         </section>
         <section id="contact">
@@ -84,7 +87,7 @@
 </footer>
 
 <script>
-        const header = document.querySelector('header');
+    const header = document.querySelector('header');
     const toggleButton = document.querySelector('.menu-toggle');
     const navUl = document.querySelector('.navUl');
 
@@ -111,20 +114,21 @@
 
     const headerOffset = document.querySelector('header').offsetHeight;
 
-document.querySelectorAll('.navLinks').forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        const targetSection = document.getElementById(targetId);
-        const elementPosition = targetSection.offsetTop;
-        const offsetPosition = elementPosition - headerOffset;
+    document.querySelectorAll('.navLinks').forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            const elementPosition = targetSection.offsetTop;
+            const offsetPosition = elementPosition - headerOffset;
 
-        window.scrollTo({
-            top: offsetPosition,
-            behavior: "smooth"
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth"
+            });
         });
     });
-});
 
 </script>
+
 </html>
